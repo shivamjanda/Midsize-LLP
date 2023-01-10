@@ -1,0 +1,18 @@
+﻿<!-- 
+   Name: Shivam Janda
+   Date: Ocotber 22, 2022
+   Description: View Lend Out xaml interface
+    -->
+<UserControl x:Class="NETD_LAB2.ViewLendOut"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NETD_LAB2"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <!-- special element to display the data from the database and does all the formatting using the adapter -->
+        <DataGrid Name="lendOutGrid" />
+    </Grid>
+</UserControl>

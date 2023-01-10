@@ -1,0 +1,66 @@
+﻿<!-- 
+   Name: Shivam Janda
+   Date: Ocotber 22, 2022
+   Description: MainWindow xaml interface
+    -->
+<Window x:Class="NETD_LAB2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NETD_LAB2"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+        fw:AcrylicWindow.Enabled ="True"
+        fw:AcrylicWindow.AcrylicWindowStyle="None" MouseDown="Window_MouseDown" FontSize="15" Height="600" Width="1080" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid fw:PointerTracker.Enabled="True" Background="#01FFFFFF" >
+        <StackPanel>
+            <!--Title-->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Midsize LLP" FontSize="18" Margin="10" VerticalAlignment="Center"/>
+            </StackPanel>
+   
+                <!-- Add Lend Out Section (tab on the side) -->
+                <ListView FontSize="12" SelectionChanged="SettingsListViewSelectionChanged">
+                    <ListViewItem Padding="1" x:Name="changeLendOut">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Send" Margin="15"/>
+                            <TextBlock Text="Lend Out" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    
+                    <!-- View Lend Out Section (tab on the side) -->
+                    <ListViewItem Padding="1" x:Name="changeViewLendOut">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Monitor" Margin="15" />
+                            <TextBlock Text="View Lend Out" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    
+                    <!-- Search Section (tab on the side) -->
+                    <ListViewItem Padding="1" x:Name="changeSearch">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Monitor" Margin="15" />
+                            <TextBlock Text="Search" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <!-- Grid 1 has to be empty because it will be filled with the contents full of user controls -->
+        <Grid Grid.Column="1" Background="White" x:Name="ContentPanel">
+        </Grid>
+
+    </Grid>
+   
+        
+</Window>
